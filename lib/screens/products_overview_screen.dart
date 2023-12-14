@@ -4,7 +4,7 @@ import 'package:shopapp/providers/products.dart';
 import '../widgets/app_drawer.dart';
 import '../providers/cart.dart';
 import '../screens/cart_screen.dart';
-import '../widgets/badge.dart';
+import '../widgets/badge.dart' as badges;
 import '../widgets/products_grid.dart';
 
 enum FilterOpition { Favorite, All }
@@ -66,14 +66,17 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
             ],
           ),
           Consumer<Cart>(
-            builder: (context, value, child) => Badge(
+            builder: (context, value, child) {
+              return badges.Badge(
                 child: IconButton(
                   icon: Icon(Icons.shopping_cart),
                   onPressed: () {
                     Navigator.of(context).pushNamed(CartScreen.routeName);
                   },
                 ),
-                value: value.itemCount.toString()),
+                value: value.itemCount.toString()
+                );
+            },
           )
         ],
       ),

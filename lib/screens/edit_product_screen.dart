@@ -96,7 +96,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 title: Text('An error occurred'),
                 content: Text(onError.toString()),
                 actions: [
-                  FlatButton(
+                  TextButton(
                       onPressed: () {
                         Navigator.of(context).pop();
                       },

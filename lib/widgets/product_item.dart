@@ -29,7 +29,7 @@ class ProductItem extends StatelessWidget {
                       ? Icons.favorite
                       : Icons.favorite_border),
                   onPressed: product.toggleFavoriteStatus,
-                  color: Theme.of(context).accentColor),
+                  color: Theme.of(context).secondaryHeaderColor),
             ),
             title: Text(
               product.title,
@@ -54,7 +54,7 @@ class ProductItem extends StatelessWidget {
                   ),
                 ));
               },
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).secondaryHeaderColor,
             ),
           ),
         ),
